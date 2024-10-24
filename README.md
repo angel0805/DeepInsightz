@@ -129,7 +129,7 @@ Nuestra web incluye dos herramientas clave:
 
 ## **🚀 Mejoras Futuras**
 
-### **Entrenamiento Continuo del Modelo de Análisis de Clientes**
+### **1. Entrenamiento Continuo del Modelo de 🕵️ Análisis de Clientes**
 
 El uso de **LightGBM** en este proyecto es fundamental para mantener la precisión de las predicciones de ventas de los clientes a lo largo del tiempo. Dado que los datos de ventas son dinámicos, necesitamos actualizar periódicamente el modelo sin la necesidad de entrenarlo completamente desde cero. Esto se logra mediante **entrenamiento incremental**, una característica que permite **añadir nuevos datos** sin reentrenar el modelo por completo.
 
@@ -151,6 +151,30 @@ El enfoque que se propone es **actualizar el modelo cada dos o tres meses** con 
 3. **Comparación Constante**: Al comparar las predicciones hechas con los datos reales mes a mes, podemos ajustar los hiperparámetros o modificar el modelo para mejorar su precisión.
 
 Este enfoque asegura que el modelo se mantenga **actualizado** y **preciso** sin interrumpir las operaciones ni generar altos costos computacionales, maximizando la capacidad de predicción con un proceso optimizado.
+
+### **2. Mejora Continua del Sistema de 💡 Recomendación de Artículos**
+
+El sistema de recomendación de cestas de compra se basa en la similitud de cestas anteriores mediante el uso de **TF-IDF** y **cosine similarity**. Esto permite a los comerciales sugerir productos complementarios de manera automática, basándose en los comportamientos históricos de compra de otros clientes. Sin embargo, existe una limitación inherente: el sistema **no recomendará productos que los clientes nunca han comprado antes**, simplemente porque no hay datos históricos sobre esos productos.
+
+#### **Propuesta de Mejora**
+
+Para superar esta limitación, proponemos integrar un mecanismo de **retroalimentación manual**, donde los expertos de la empresa puedan añadir **cestas de productos recomendados** que no han sido comprados juntos históricamente, pero que se sabe, por experiencia, que son combinaciones relevantes. Este enfoque ofrece una solución práctica para mejorar las recomendaciones de productos que, de otro modo, pasarían desapercibidos en el sistema automatizado.
+
+#### **Mejoras Técnicas para la Retroalimentación Manual**
+
+1. **Actualización automática del modelo**: A medida que se añadan nuevas cestas al sistema, estas serán automáticamente integradas en la matriz **TF-IDF** y podrán influir en las recomendaciones futuras.
+
+2. **Incorporación de cestas definidas manualmente**: Los expertos podrán crear **cestas predefinidas** que incluyan productos que el cliente podría desconocer, pero que son cruciales para completar una venta (por ejemplo, herramientas especializadas que no siempre se compran junto con los productos principales, pero que son necesarias para su instalación). Al permitir que estos productos se **recomienden manualmente**, evitamos que el modelo dependa únicamente de la historia de compra del cliente.
+
+#### **Implementación Técnica**
+
+Técnicamente, esta retroalimentación se gestionará mediante la función **retroalimentacion**, que ya permite añadir nuevas cestas al historial, reentrenar la matriz de términos y ajustar el sistema de recomendaciones en base a estos cambios. De esta forma, se actualiza la representación **TF-IDF** para reflejar tanto las nuevas cestas históricas como las manuales, asegurando que el modelo **no pierda efectividad** con el tiempo.
+
+#### **Beneficios del Enfoque Manual**
+
+- **Ampliación de las recomendaciones**: Se garantiza que se sugieran productos clave que no aparecen en los registros históricos de compra del cliente.
+- **Mayor control del catálogo**: La empresa puede influir activamente en el sistema de recomendaciones, destacando productos estratégicos o nuevos lanzamientos.
+- **Mejora continua del sistema**: Cada vez que se añaden nuevas cestas, el modelo se actualiza, mejorando con el tiempo a medida que se acumulan más datos y se ajusta a las realidades comerciales.
 
 ---
 
