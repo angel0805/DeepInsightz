@@ -5,12 +5,13 @@
 ---
 
 ## **📌 Problemas del Negocio**
- ### 1r Problema Identificado:
- Uno de los problemas que hemos detectado tras hablar con el almacén, es la **falta de herramientas** que permitan a los comerciales **entender de manera eficiente el comportamiento de compra de sus clientes B2B** (aproximadamente 4.000). Actualmente, la empresa se centra en la venta anual del cliente y analiza a los mejores clientes individualmente, **perdiendo oportunidades de crecimiento** entre el resto de clientes por esta limitación.
+ ### Primer Problema Identificado:
+ Hemos detectado una **falta de herramientas** que permitan a los comerciales **analizar de manera eficiente el comportamiento de compra de sus clientes B2B** (aproximadamente 4.000). 
+ El análisis que realiza la empresa actualmente, se centra en las ventas anuales de los mejores clientes, **limitando la identificación de oportunidades de crecimiento** entre el resto de sus clientes, además de reducir el potencial de intervención en decisiones clave.
  ### Retos clave:
- - **Identificar cambios en el comportamiento de compra**: Si un cliente modifica sus hábitos de compra o deja de adquirir productos de una marca específica, resulta difícil detectar estos cambios sin un análisis detallado. Por ejemplo, un cliente que deja de comprar platos de ducha de nuestra empresa para adquirirlos de un competidor podría, al mismo tiempo, aumentar las compras de otros productos debido al crecimiento de su negocio. Este cambio mantendría el volumen global de ventas estable y pasaría inadvertido, representando así una oportunidad de venta perdida.
- - **Saturación de información**: Los vendedores manejan una amplia cartera de clientes y pedidos, lo que dificulta el análisis detallado de cada caso. Como resultado, pierden oportunidades para intervenir a tiempo, mejorar las ventas o corregir patrones de compra.
- - **Limitaciones de acceso a la información**: Los vendedores no disponen de acceso completo a la información de sus clientes, lo que les impide realizar análisis detallados sin depender de la colaboración de personas autorizadas, generando cuellos de botella en el proceso.
+ - **Detección de cambios en los hábitos de compra**: Si un cliente modifica sus hábitos de compra o deja de adquirir productos de una marca en particular, resulta difícil detectar estos cambios sin un análisis detallado. Por ejemplo, un cliente que deja de comprar platos de ducha de nuestra empresa para adquirirlos de un competidor podría, al mismo tiempo, aumentar las compras de otros productos debido al crecimiento de su negocio. Este cambio mantendría el volumen global de ventas estable y pasaría inadvertido, representando así una oportunidad de venta perdida.
+ - **Saturación de información**: Los comerciales gestionan una amplia cartera de clientes y pedidos, lo que les dificulta analizar a fondo el comportamiento individual de cada cliente. Esto resulta en una pérdida de oportunidades estratégicas, ya que, debido a la gran variedad de productos, es probable que terminen ofreciendo opciones que no se ajustan a las necesidades o intereses específicos del cliente.
+ - **Acceso limitado a la información clave**: Los vendedores no disponen de acceso completo a la información de sus clientes, lo que les impide realizar análisis detallados sin depender de la colaboración de personas autorizadas. Esta situación genera cuellos de botella y retrasa la toma de decisiones, reduciendo la agilidad en la atención y respuesta a las necesidades de los clientes.
 
 ---
 
