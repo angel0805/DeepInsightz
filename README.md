@@ -61,14 +61,87 @@ El análisis del dataset reveló algunos aspectos importantes sobre los clientes
 ---
 
 ## **⚙️ Algoritmos y Métricas Utilizadas**
-
+### 1. **🕵️ Análisis de Clientes**
 - **Algoritmo**: Se utilizó **LightGBM** para las predicciones, por su eficiencia al manejar grandes cantidades de datos con muchos valores cero, debido a la gran cantidad de fabricantes.
 - **Métricas de Evaluación**: 
   - **MAE** (Mean Absolute Error)
+El MAE mide el error medio absoluto entre las predicciones y los valores reales. Simplemente toma la diferencia absoluta entre ambos y luego calcula el promedio. Es fácil de entender, ya que nos dice cuántas unidades (en promedio) nos hemos desviado de los valores reales.
+
+Ejemplo: Si predecimos que un cliente comprará 200 unidades y realmente compra 220, la diferencia absoluta es 20 unidades. Si repetimos esto para varios clientes y obtenemos diferencias como 10, 15, y 25, el MAE sería el promedio de esas diferencias, es decir, (20 + 10 + 15 + 25) / 4 = 17.5 unidades.
+
   - **RMSE** (Root Mean Square Error)
+El RMSE también mide la diferencia entre los valores reales y predichos, pero penaliza más los errores grandes. Esto se logra elevando al cuadrado las diferencias antes de hacer la media y tomando la raíz cuadrada del resultado.
+
+Ejemplo: Si tenemos las mismas diferencias que antes (20, 10, 15, 25), elevamos cada una al cuadrado: 400, 100, 225, 625. Luego, calculamos el promedio de estos números: (400 + 100 + 225 + 625) / 4 = 337.5. Finalmente, tomamos la raíz cuadrada, obteniendo un RMSE de aproximadamente 18.37 unidades. Este valor es más sensible a las grandes diferencias.
+
   - **SMAPE** (Symmetric Mean Absolute Percentage Error)
 
-Estas métricas nos permitieron medir la precisión de las predicciones y garantizar su utilidad para la empresa.
+El SMAPE es una métrica que se utiliza para medir la precisión de los modelos de predicción. Es una variación del MAPE (Mean Absolute Percentage Error), diseñada para evitar los problemas que surgen cuando los valores reales son muy pequeños o cercanos a cero. A diferencia del MAPE, que puede volverse inestable en estas situaciones, el SMAPE es más robusto y proporciona una mejor representación de los errores de predicción.
+
+La fórmula de SMAPE es:
+
+𝑆
+𝑀
+𝐴
+𝑃
+𝐸
+=
+100
+%
+𝑁
+∑
+𝑖
+=
+1
+𝑁
+∣
+𝑦
+real
+−
+𝑦
+predicho
+∣
+(
+∣
+𝑦
+real
+∣
++
+∣
+𝑦
+predicho
+∣
+2
+)
+SMAPE= 
+N
+100%
+​
+ ∑ 
+i=1
+N
+​
+  
+( 
+2
+∣y 
+real
+​
+ ∣+∣y 
+predicho
+​
+ ∣
+​
+ )
+∣y 
+real
+​
+ −y 
+predicho
+​
+ ∣
+​
+
 
 ---
 
