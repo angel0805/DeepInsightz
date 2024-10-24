@@ -4,9 +4,6 @@
 
 </div>
 
-
----
-
 <div align="center">
 
 ## **💻 Aplicación Web en Funcionamiento**
