@@ -26,6 +26,20 @@
 
 ---
 
+## **🛠 Soluciones Propuestas**
+
+### 1. **Herramienta de Análisis de Clientes**
+Esta herramienta permite a los vendedores analizar de manera rápida y precisa el comportamiento de compra de cada cliente, lo que les ayuda a:
+- **Detectar cambios en los hábitos de compra**: Identificar rápidamente si un cliente ha dejado de comprar ciertas marcas o productos.
+- **Mejorar las intervenciones estratégicas**: Al proporcionar acceso a información clave, los vendedores pueden ajustar sus ofertas y estrategias de venta para aprovechar mejor las oportunidades de crecimiento.
+
+### 2. **Herramienta de Recomendación de Artículos**
+Con esta herramienta, los vendedores pueden sugerir productos complementarios basados en las compras previas del cliente, lo que ayuda a:
+- **Aumentar el valor de la cesta de compra**: Facilitar las ventas cruzadas, incluso cuando el trabajador no conoce en profundidad el catálogo.
+- **Optimizar el tiempo en tienda**: Proporcionar recomendaciones rápidas y relevantes que mejoren la experiencia del cliente, evitando que vuelva a la tienda por productos olvidados.
+
+---
+
 ## **📊 Recolección de Datos**
 
 - **Origen de los datos**: Los datos provienen de los albaranes de compra históricos de los clientes B2B de la empresa.
