@@ -185,6 +185,35 @@ Nuestra web incluye dos herramientas clave:
 
 ---
 
+## **📂 Organización del Proyecto**
+
+El proyecto ha sido organizado de manera modular para facilitar su mantenimiento y escalabilidad, distribuyéndolo en tres plataformas principales:
+
+1. **GitHub**: Aquí se encuentra el código fuente del proyecto, incluyendo los **Jupyter Notebooks** que documentan cada etapa del desarrollo. Dentro de la carpeta `src/`, hemos organizado el contenido en distintas subcarpetas, cada una correspondiente a un paso clave del proyecto, como la limpieza de datos, preparación de datos para LightGBM, y los análisis de clustering.
+
+   - **Estructura de carpetas dentro de `src/`**:
+     - `limpieza_de_datos/`: Incluye los notebooks y scripts utilizados para limpiar y preparar los datos iniciales.
+     - `clustering/`: Contiene los notebooks relacionados con la segmentación de clientes utilizando técnicas de clustering.
+     - `lightGBM_preparation/`: Aquí están los notebooks para preparar los datos necesarios para entrenar el modelo con **LightGBM**.
+     - `recomendacion_productos/`: Almacena los notebooks relacionados con el sistema de recomendación de artículos.
+
+2. **Google Drive**: Debido al tamaño considerable de los archivos de datos (.csv), utilizamos Google Drive para almacenar y gestionar los datasets utilizados en el proyecto. Los archivos CSV son demasiado grandes para ser almacenados directamente en GitHub, por lo que se acceden a ellos directamente desde Google Drive.
+
+   - **Archivos clave en Google Drive**:
+     - `ventas_clientes.csv`: Contiene los datos históricos de ventas por cliente.
+     - `productos.csv`: Listado completo de productos disponibles.
+     - `cestas.csv`: Almacena los datos históricos de cestas de compra utilizadas para el sistema de recomendación.
+   
+3. **Hugging Face Spaces**: La aplicación web que integra el análisis de clientes y las recomendaciones de productos está desplegada en **Hugging Face Spaces**. Esta plataforma facilita la visualización y uso de las herramientas desarrolladas, permitiendo a los usuarios interactuar con el modelo de predicción y el sistema de recomendación.
+
+   - **Características principales de la app en Hugging Face**:
+     - **Análisis de Clientes**: Visualización de las predicciones de ventas por fabricante para cada cliente, junto con una comparativa de los resultados reales.
+     - **Recomendación de Productos**: Sugerencias automáticas de productos complementarios basadas en las cestas de compra anteriores de los clientes.
+
+Con esta organización, podemos mantener un flujo de trabajo ágil, asegurando que los datos y los scripts estén bien gestionados y accesibles para todo el equipo.
+
+---
+
 ## **👥 Colaboradores**
 
 - [**Angel Colina**](https://github.com/angel0805)
