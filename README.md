@@ -29,11 +29,8 @@ El proyecto ha sido organizado de manera modular para facilitar su mantenimiento
    
 3. **Hugging Face Spaces**: La aplicación web que integra el análisis de clientes y las recomendaciones de productos está desplegada en **Hugging Face Spaces**. Esta plataforma facilita la visualización y uso de las herramientas desarrolladas, permitiendo a los usuarios interactuar con el modelo de predicción y el sistema de recomendación.
 
-   - **Características principales de la app en Hugging Face**:
-     - **Análisis de Clientes**: Visualización de las predicciones de ventas por fabricante para cada cliente, junto con una comparativa de los resultados reales.
-     - **Recomendación de Productos**: Sugerencias automáticas de productos complementarios basadas en las cestas de compra anteriores de los clientes.
+Para acceder a la aplicación, solo tienes que pulsar sobre [**Enlace a la web del proyecto**](https://huggingface.co/spaces/GMARTINEZMILLA/Final_Project).
 
-Con esta organización, podemos mantener un flujo de trabajo ágil, asegurando que los datos y los scripts estén bien gestionados y accesibles para todo el equipo.
 
 ---
 
