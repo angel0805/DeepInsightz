@@ -2,11 +2,15 @@
 
 # **Deep Insightz - Proyecto de Ciencia de Datos**
 
+🖥️ [**Enlace a la web del proyecto**](https://huggingface.co/spaces/GMARTINEZMILLA/Final_Project) 🖥️
+
 </div>
+
+---
 
 <div align="center">
 
-## **💻 Aplicación Web en Funcionamiento**
+## **💻 Funciones de la app**
 
 </div>
 
@@ -17,11 +21,6 @@ Nuestra web incluye dos herramientas clave:
 
 ![Imagen del Proyecto en Funcionamiento](images/deepinsightz_web.jpg)
 
-<div align="center">
-
-🖥️ [**Enlace a la web del proyecto**](https://huggingface.co/spaces/GMARTINEZMILLA/Final_Project) 🖥️
-
-</div>
 
 ---
 
