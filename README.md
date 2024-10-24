@@ -4,7 +4,7 @@
 
 ---
 
-## **📌 Problemas del Negocio**
+## **🚨 Problemas del Negocio**
  ### 🚩Primer Problema Identificado:
  Hemos detectado una **falta de herramientas** que permitan a los comerciales **analizar de manera eficiente el comportamiento de compra de sus clientes B2B** (aproximadamente 4.000). 
  El análisis que realiza la empresa actualmente, se centra en las ventas anuales de los mejores clientes, **limitando la identificación de oportunidades de crecimiento** entre el resto de sus clientes, además de reducir el potencial de intervención en decisiones clave.
