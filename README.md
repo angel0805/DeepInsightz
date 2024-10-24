@@ -97,6 +97,7 @@ En este ejemplo, predecimos que se venderían 5 unidades y se venden 0. Aquí el
 ![Ejemplo SMAPE y MAPE](images/SMAPE_2.jpg)
 
 En este caso, el SMAPE devuelve un valor finito y más razonable, lo que lo hace más adecuado cuando se trata de valores cercanos a cero. En comparación, el MAPE, incluso si le asignamos un valor muy pequeño, puede generar un porcentaje extremadamente alto. Dado que en nuestro proyecto es probable que encontremos escenarios con valores cercanos a cero, el SMAPE nos permite evaluar de manera más precisa la efectividad de las predicciones.
+
 ---
 
 ## **💻 Aplicación Web en Funcionamiento**
