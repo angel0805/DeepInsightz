@@ -28,12 +28,12 @@
 
 ## **🛠 Soluciones Propuestas**
 
-### 1. **Herramienta de Análisis de Clientes**
-Esta herramienta permite a los vendedores analizar de manera rápida y precisa el comportamiento de compra de cada cliente, lo que les ayuda a:
-- **Detectar cambios en los hábitos de compra**: Identificar rápidamente si un cliente ha dejado de comprar ciertas marcas o productos.
-- **Mejorar las intervenciones estratégicas**: Al proporcionar acceso a información clave, los vendedores pueden ajustar sus ofertas y estrategias de venta para aprovechar mejor las oportunidades de crecimiento.
+### 1. **🕵️ Análisis de Clientes**
+Para abordar la falta de herramientas que permita a los comerciales analizar eficazmente el comportamiento de compra de los clientes, hemos desarrollado la herramienta de Análisis de Cliente. Esta solución proporciona una visión clara de las ventas por fabricante para cada cliente, facilitando la detección de cambios en los hábitos de compra. Al mostrar las predicciones de ventas futuras, comparadas con los resultados reales, los comerciales pueden identificar rápidamente si un cliente ha dejado de adquirir productos de una marca específica y así poder tomar medidas preventivas o correctivas.
 
-### 2. **Herramienta de Recomendación de Artículos**
+Además, la herramienta **simplifica la gestión de información**, en lugar de tener que solicitar datos o realizar análisis manuales, ofrece una visión global del cliente, permitiendo a los comerciales revisar de un vistazo sus preferencias y tendencias de compra. Esto agiliza la toma de decisiones y mejora la capacidad de respuesta ante las necesidades del cliente.
+
+### 2. **💡 Recomendación de Artículos**
 Con esta herramienta, los vendedores pueden sugerir productos complementarios basados en las compras previas del cliente, lo que ayuda a:
 - **Aumentar el valor de la cesta de compra**: Facilitar las ventas cruzadas, incluso cuando el trabajador no conoce en profundidad el catálogo.
 - **Optimizar el tiempo en tienda**: Proporcionar recomendaciones rápidas y relevantes que mejoren la experiencia del cliente, evitando que vuelva a la tienda por productos olvidados.
