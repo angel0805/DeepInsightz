@@ -62,7 +62,10 @@ El análisis del dataset reveló algunos aspectos importantes sobre los clientes
 
 ## **⚙️ Algoritmos y Métricas Utilizadas**
 ### 1. **🕵️ Análisis de Clientes**
-- **Algoritmo**: Se utilizó **LightGBM** para las predicciones, por su eficiencia al manejar grandes cantidades de datos con muchos valores cero, debido a la gran cantidad de fabricantes.
+- **Algoritmo**: Se utilizó **LightGBM** para las predicciones, por su eficiencia al manejar grandes cantidades de datos con muchos valores cero.
+
+En nuestro caso, la empresa cuenta con una extensa base de datos que incluye una gran cantidad de fabricantes y clientes, muchos de los cuales tienen ventas irregulares o incluso nulas. LightGBM es **particularmente adecuado en situaciones donde los datos contienen muchos valores cero**, ya que implementa técnicas de optimización como el histograma de reducción de precisión. Esto le permite realizar cálculos más rápidos y reducir el consumo de memoria sin sacrificar la precisión. Además, LightGBM es **altamente eficiente en la gestión de grandes datasets con una gran cantidad de variables categóricas**, como los distintos fabricantes. Su capacidad para tratar datos dispersos (sparse data) y manejar valores faltantes automáticamente también nos resultó crucial en este proyecto, dado que el comportamiento de compra de los clientes puede variar significativamente según el fabricante y el período.
+
 - **Métricas de Evaluación**: 
   - **MAE** (Mean Absolute Error)
 El MAE mide el error medio absoluto entre las predicciones y los valores reales. 
@@ -97,6 +100,19 @@ En este ejemplo, predecimos que se venderían 5 unidades y se venden 0. Aquí el
 ![Ejemplo SMAPE y MAPE](images/SMAPE_2.jpg)
 
 En este caso, el SMAPE devuelve un valor finito y más razonable, lo que lo hace más adecuado cuando se trata de valores cercanos a cero. En comparación, el MAPE, incluso si le asignamos un valor muy pequeño, puede generar un porcentaje extremadamente alto. Dado que en nuestro proyecto es probable que encontremos escenarios con valores cercanos a cero, el SMAPE nos permite evaluar de manera más precisa la efectividad de las predicciones.
+
+### 2. **💡 Recomendación de Artículos**
+
+- **Algoritmo**: Para generar recomendaciones de productos complementarios, implementamos un enfoque basado en la similitud de cestas de compra utilizando **TF-IDF** y **cosine similarity**. Este método analiza las cestas de compra históricas y calcula la relevancia de cada artículo en relación con las compras anteriores del cliente. Para ello, usamos un modelo basado en la frecuencia de términos (**Term Frequency - TF**), donde cada cesta se convierte en una representación de los productos comprados. Esto nos permite comparar la nueva cesta con otras cestas similares y recomendar productos adicionales que aún no han sido añadidos por el cliente.
+
+En nuestro proyecto, utilizamos esta técnica porque:
+
+- Es eficiente al manejar grandes cantidades de datos de productos y cestas.
+- Permite generar recomendaciones basadas en datos históricos sin depender de un conocimiento exhaustivo del catálogo por parte de los trabajadores.
+- Mejora las oportunidades de venta cruzada, facilitando la sugerencia automática de productos relevantes.
+
+**Cómo funciona el sistema de recomendaciones**: El algoritmo toma la cesta de compra actual del cliente y la compara con todas las cestas de compra históricas utilizando el **cosine similarity**, que mide la similitud entre dos vectores. A partir de las cestas más similares, sugiere productos adicionales que no están en la cesta actual, priorizando aquellos que tienen una mayor relevancia en las cestas comparadas.
+
 
 ---
 
