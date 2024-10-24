@@ -113,18 +113,6 @@ En nuestro proyecto, utilizamos esta técnica porque:
 
 **Cómo funciona el sistema de recomendaciones**: El algoritmo toma la cesta de compra actual del cliente y la compara con todas las cestas de compra históricas utilizando el **cosine similarity**, que mide la similitud entre dos vectores. A partir de las cestas más similares, sugiere productos adicionales que no están en la cesta actual, priorizando aquellos que tienen una mayor relevancia en las cestas comparadas.
 
-
----
-
-## **💻 Aplicación Web en Funcionamiento**
-
-Nuestra web incluye dos herramientas clave:
-
-1. **Análisis de Clientes**: Predicción de ventas por fabricante, ayudando a los equipos de ventas a tomar decisiones basadas en datos.
-2. **Recomendación de Artículos**: Sugiere productos complementarios basados en cestas de compra anteriores de los clientes.
-
-![Imagen del Proyecto en Funcionamiento](URL_de_la_imagen)
-
 ---
 
 ## **🚀 Mejoras Futuras**
@@ -183,6 +171,17 @@ Para mejorar el sistema de manera automática, cada vez que se añadan nuevas ce
 - **Mayor control sobre las recomendaciones**: La empresa puede influir activamente en el sistema, asegurándose de destacar productos estratégicos, lanzar nuevos artículos o mejorar las combinaciones de productos.
   
 - **Mejora continua del sistema**: El sistema mejora con cada nueva cesta añadida, ya que el modelo se ajusta dinámicamente con el tiempo, garantizando que las recomendaciones sigan siendo útiles y relevantes.
+
+---
+
+## **💻 Aplicación Web en Funcionamiento**
+
+Nuestra web incluye dos herramientas clave:
+
+1. **Análisis de Clientes**: Predicción de ventas por fabricante, ayudando a los equipos de ventas a tomar decisiones basadas en datos.
+2. **Recomendación de Artículos**: Sugiere productos complementarios basados en cestas de compra anteriores de los clientes.
+
+![Imagen del Proyecto en Funcionamiento](images/deepinsightz_web.jpg)
 
 ---
 
