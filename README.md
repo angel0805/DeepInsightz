@@ -40,10 +40,14 @@ Además, esta solución optimiza el tiempo en tienda al proporcionar recomendaci
 
 ---
 
-## **📊 Recolección de Datos**
+## **📊 Recolección y preparación de datos**
+Los datos utilizados en este proyecto provienen de los albaranes de compra históricos de los clientes B2B de la empresa, que nos entregaron con la información de los clientes codificada. A continuación, se describen los pasos más relevantes en el proceso de limpieza y preparación de los datos:
 
-- **Origen de los datos**: Los datos provienen de los albaranes de compra históricos de los clientes B2B de la empresa.
-- **Formato**: Cada albarán contiene información clave como: cliente, fabricante, producto, cantidad y fecha de compra.
+- **Corrección de errores en los códigos**: Durante la exportación, algunos códigos numéricos se transformaron en notación científica (ej. '09E+12'), lo que requirió ajustar la forma en que se exportaron. También se solucionaron errores en los caracteres, como la sustitución incorrecta de la letra "Ñ".
+- **Eliminación de datos irrelevantes**: Se eliminaron instancias con artículos nulos o descripciones erróneas (como aquellas que contenían "DSCTL"). También se neutralizaron los productos devueltos, descartando las devoluciones donde no hubo compras desde 2021.
+- **Generación de nuevos campos**: Se crearon identificadores únicos de facturas combinando serie y número. Asimismo, se calculó la frecuencia anual de compra y el total de ventas anuales por cliente para obtener una visión clara de su comportamiento.
+- **Reducción del conjunto de fabricantes**: Dado que muchos fabricantes tenían ventas muy bajas, se decidió concentrar los análisis en los 99 fabricantes más relevantes, aquellos con más de 1.000 artículos vendidos en los últimos 4 años.
+- **Enriquecimiento de datos**: Se añadieron columnas que incluyen el grupo de productos y las categorías de clientes previamente definidas por la empresa (plomero, electricista, constructor, etc.).
 
 ---
 
