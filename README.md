@@ -93,6 +93,6 @@ Algunas de las mejoras propuestas para el proyecto incluyen:
 
 ## **👥 Colaboradores**
 
-- **Nombre del colaborador 1** - Data Scientist
-- **Nombre del colaborador 2** - Full Stack Developer
-- **Nombre del colaborador 3** - Especialista en Ventas B2B
+- [**Angel Colina**](https://github.com/angel0805)
+- [**Maria Ortega Rivas**](https://github.com/mariaorrri)
+- [**Guillermo Martínez Millá**](https://github.com/GuillePrograma94)
