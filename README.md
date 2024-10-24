@@ -129,11 +129,28 @@ Nuestra web incluye dos herramientas clave:
 
 ## **🚀 Mejoras Futuras**
 
-Algunas de las mejoras propuestas para el proyecto incluyen:
+### **Entrenamiento Continuo del Modelo de Análisis de Clientes**
 
-- **Entrenamiento continuo del modelo**: Seguir afinando el modelo con nuevos datos de ventas.
-- **Expansión al sector B2C**: Aplicar las herramientas de análisis y recomendación también para clientes B2C.
-- **Mejora de la interfaz**: Optimizar la experiencia de usuario, especialmente en dispositivos móviles.
+El uso de **LightGBM** en este proyecto es fundamental para mantener la precisión de las predicciones de ventas de los clientes a lo largo del tiempo. Dado que los datos de ventas son dinámicos, necesitamos actualizar periódicamente el modelo sin la necesidad de entrenarlo completamente desde cero. Esto se logra mediante **entrenamiento incremental**, una característica que permite **añadir nuevos datos** sin reentrenar el modelo por completo.
+
+#### **Propuesta de Actualización**
+
+El enfoque que se propone es **actualizar el modelo cada dos o tres meses** con los datos más recientes, manteniendo siempre un retraso deliberado en el entrenamiento. Esto nos permite comparar las **predicciones hechas previamente** para un mes determinado con los **resultados reales** una vez que esos datos estén disponibles. El flujo sería el siguiente:
+
+1. **Entrenamiento inicial**: El modelo se entrena con todos los datos históricos disponibles hasta el mes "X".
+2. **Predicción futura**: Se generan predicciones para los meses **X+1**, **X+2**, y así sucesivamente.
+3. **Retraso intencionado**: Dos meses después (por ejemplo, en el mes "X+2"), obtenemos los datos reales del mes **X+1**. En ese momento, se compara la predicción de ese mes con los resultados reales.
+4. **Reentrenamiento incremental**: Usamos los nuevos datos de los meses **X+1** y **X+2** para actualizar el modelo **sin necesidad de reentrenar completamente**. Esto se hace utilizando la capacidad de LightGBM de añadir nuevos datos a un modelo previamente entrenado, mediante su parámetro `init_model`, que permite reanudar el entrenamiento desde donde se dejó.
+
+#### **Ventajas del Entrenamiento Incremental**
+
+1. **Eficiencia de Recursos**: Este enfoque evita reentrenar todo el modelo desde cero, lo que ahorra significativamente tiempo de computación y recursos. Solo se entrena con los nuevos datos, ajustando el modelo existente.
+
+2. **Adaptación a Cambios Rápidos**: A medida que los hábitos de compra de los clientes cambian, el modelo puede actualizarse regularmente para reflejar estos cambios y mejorar las predicciones.
+
+3. **Comparación Constante**: Al comparar las predicciones hechas con los datos reales mes a mes, podemos ajustar los hiperparámetros o modificar el modelo para mejorar su precisión.
+
+Este enfoque asegura que el modelo se mantenga **actualizado** y **preciso** sin interrumpir las operaciones ni generar altos costos computacionales, maximizando la capacidad de predicción con un proceso optimizado.
 
 ---
 
