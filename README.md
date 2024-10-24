@@ -7,7 +7,11 @@
 
 ---
 
+<div align="center">
+
 ## **💻 Aplicación Web en Funcionamiento**
+
+</div>
 
 Nuestra web incluye dos herramientas clave:
 
@@ -16,7 +20,11 @@ Nuestra web incluye dos herramientas clave:
 
 ![Imagen del Proyecto en Funcionamiento](images/deepinsightz_web.jpg)
 
+<div align="center">
+
 🖥️ [**Enlace a la web del proyecto**](https://huggingface.co/spaces/GMARTINEZMILLA/Final_Project) 🖥️
+
+</div>
 
 ---
 
