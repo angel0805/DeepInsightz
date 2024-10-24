@@ -79,6 +79,7 @@ Ejemplo: Si tenemos las mismas diferencias que antes (20, 10, 15, 25), elevamos 
 El SMAPE es una métrica que se utiliza para medir la precisión de los modelos de predicción. Es una variación del MAPE (Mean Absolute Percentage Error), diseñada para evitar los problemas que surgen cuando los valores reales son muy pequeños o cercanos a cero. A diferencia del MAPE, que puede volverse inestable en estas situaciones, el SMAPE es más robusto y proporciona una mejor representación de los errores de predicción.
 
 La fórmula de SMAPE es:
+
 ![Fórmula de SMAPE](images/SMAPE.jpg)
 
 
