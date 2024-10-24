@@ -8,22 +8,6 @@
 
 ---
 
-<div align="center">
-
-## **💻 Funciones de la app**
-
-</div>
-
-Nuestra web incluye dos herramientas clave:
-
-1. **Análisis de Clientes**: Predicción de ventas por fabricante, ayudando a los equipos de ventas a tomar decisiones basadas en datos.
-2. **Recomendación de Artículos**: Sugiere productos complementarios basados en cestas de compra anteriores de los clientes.
-
-![Imagen del Proyecto en Funcionamiento](images/deepinsightz_web.jpg)
-
-
----
-
 ## **📂 Organización del Proyecto**
 
 El proyecto ha sido organizado de manera modular para facilitar su mantenimiento y escalabilidad, distribuyéndolo en tres plataformas principales:
@@ -50,6 +34,21 @@ El proyecto ha sido organizado de manera modular para facilitar su mantenimiento
      - **Recomendación de Productos**: Sugerencias automáticas de productos complementarios basadas en las cestas de compra anteriores de los clientes.
 
 Con esta organización, podemos mantener un flujo de trabajo ágil, asegurando que los datos y los scripts estén bien gestionados y accesibles para todo el equipo.
+
+---
+
+<div align="center">
+
+## **💻 Funciones de la app**
+
+</div>
+
+Nuestra web incluye dos herramientas clave:
+
+1. **Análisis de Clientes**: Predicción de ventas por fabricante, ayudando a los equipos de ventas a tomar decisiones basadas en datos.
+2. **Recomendación de Artículos**: Sugiere productos complementarios basados en cestas de compra anteriores de los clientes.
+
+![Imagen del Proyecto en Funcionamiento](images/deepinsightz_web.jpg)
 
 
 ---
