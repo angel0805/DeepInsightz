@@ -4,9 +4,13 @@
 
 ---
 
-## **📌 Problema del Negocio**
-
-El objetivo de este proyecto es ayudar a una empresa de fontanería que vende a clientes B2B (instaladores, constructoras) a **optimizar sus ventas**. El problema principal es la **falta de herramientas que permitan entender el comportamiento de compra** de los clientes sin necesidad de analizar cada albarán de manera manual.
+## **📌 Problemas del Negocio**
+ ### 1r Problema Identificado:
+ Uno de los problemas que hemos detectado tras hablar con el almacén, es la **falta de herramientas** que permitan a los comerciales **entender de manera eficiente el comportamiento de compra de sus clientes B2B** (aproximadamente 4.000). Actualmente, la empresa se centra en la venta anual del cliente y analiza a los mejores clientes individualmente, **perdiendo oportunidades de crecimiento** entre el resto de clientes por esta limitación.
+ ### Retos clave:
+ - **Identificar cambios en el comportamiento de compra**: Si un cliente modifica sus hábitos de compra o deja de adquirir productos de una marca específica, resulta difícil detectar estos cambios sin un análisis detallado. Por ejemplo, un cliente que deja de comprar platos de ducha de nuestra empresa para adquirirlos de un competidor podría, al mismo tiempo, aumentar las compras de otros productos debido al crecimiento de su negocio. Este cambio mantendría el volumen global de ventas estable y pasaría inadvertido, representando así una oportunidad de venta perdida.
+ - **Saturación de información**: Los vendedores manejan una amplia cartera de clientes y pedidos, lo que dificulta el análisis detallado de cada caso. Como resultado, pierden oportunidades para intervenir a tiempo, mejorar las ventas o corregir patrones de compra.
+ - **Limitaciones de acceso a la información**: Los vendedores no disponen de acceso completo a la información de sus clientes, lo que les impide realizar análisis detallados sin depender de la colaboración de personas autorizadas, generando cuellos de botella en el proceso.
 
 ---
 
