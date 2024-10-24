@@ -1,7 +1,10 @@
+<div align="center">
+
 # **Deep Insightz - Proyecto de Ciencia de Datos**
 
 🌐 [**Enlace al Proyecto en Hugging Face**](https://huggingface.co/spaces/GMARTINEZMILLA/Final_Project)
 
+</div>
 ---
 
 ## **🚨 Problemas Identificados**
