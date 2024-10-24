@@ -154,13 +154,11 @@ Este enfoque asegura que el modelo se mantenga **actualizado** y **preciso** sin
 
 ### **2. Mejora Continua del Sistema de 💡 Recomendación de Artículos**
 
-El sistema de recomendación de cestas de compra se basa en la similitud de cestas anteriores mediante el uso de **TF-IDF** y **cosine similarity**. Esto permite a los comerciales sugerir productos complementarios de manera automática, basándose en los comportamientos históricos de compra de otros clientes. Sin embargo, existe una limitación inherente: el sistema **no recomendará productos que los clientes nunca han comprado antes**, simplemente porque no hay datos históricos sobre esos productos.
+El sistema de recomendación de cestas de compra se basa en la similitud de cestas anteriores mediante el uso de **TF-IDF** y **cosine similarity**, lo que permite sugerir productos complementarios basados en las compras históricas de los clientes. A pesar de ser eficaz, este enfoque tiene una limitación: **no recomendará productos que los clientes nunca han comprado antes**, lo que puede dejar fuera artículos relevantes que podrían incrementar las ventas.
 
-#### **Propuesta de Mejora**
+#### **Retroalimentación Manual**
 
-Para superar esta limitación, proponemos integrar un mecanismo de **retroalimentación manual**, donde los expertos de la empresa puedan añadir **cestas de productos recomendados** que no han sido comprados juntos históricamente, pero que se sabe, por experiencia, que son combinaciones relevantes. Este enfoque ofrece una solución práctica para mejorar las recomendaciones de productos que, de otro modo, pasarían desapercibidos en el sistema automatizado.
-
-#### **Mejoras Técnicas para la Retroalimentación Manual**
+Para evitar este problema, añadimos la opción de generar cestas de forma manual, de esta manera, si la empresa detecta un producto que debería recomendarse y que los clientes no lo compran porque lo desconocen, podrán generar las cestas necesarias para que el programa entienda que ese producto se debe recomendar junto a otros.
 
 1. **Actualización automática del modelo**: A medida que se añadan nuevas cestas al sistema, estas serán automáticamente integradas en la matriz **TF-IDF** y podrán influir en las recomendaciones futuras.
 
@@ -170,11 +168,21 @@ Para superar esta limitación, proponemos integrar un mecanismo de **retroalimen
 
 Técnicamente, esta retroalimentación se gestionará mediante la función **retroalimentacion**, que ya permite añadir nuevas cestas al historial, reentrenar la matriz de términos y ajustar el sistema de recomendaciones en base a estos cambios. De esta forma, se actualiza la representación **TF-IDF** para reflejar tanto las nuevas cestas históricas como las manuales, asegurando que el modelo **no pierda efectividad** con el tiempo.
 
-#### **Beneficios del Enfoque Manual**
+#### **Retroalimentación Automática**
 
-- **Ampliación de las recomendaciones**: Se garantiza que se sugieran productos clave que no aparecen en los registros históricos de compra del cliente.
-- **Mayor control del catálogo**: La empresa puede influir activamente en el sistema de recomendaciones, destacando productos estratégicos o nuevos lanzamientos.
-- **Mejora continua del sistema**: Cada vez que se añaden nuevas cestas, el modelo se actualiza, mejorando con el tiempo a medida que se acumulan más datos y se ajusta a las realidades comerciales.
+Para mejorar el sistema de manera automática, cada vez que se añadan nuevas cestas de compra, el sistema actualizará automáticamente la matriz **TF-IDF** con los datos recientes. Esto permite que las nuevas tendencias de compra de los clientes se reflejen en las recomendaciones futuras sin intervención manual.
+
+- **Incorporación de datos recientes**: Con el tiempo, los patrones de compra pueden cambiar, ya sea por la introducción de nuevos productos o por cambios en las necesidades del cliente. A medida que estas nuevas cestas de compra se añadan al sistema, la **matriz TF-IDF** se ajustará para reflejar esos cambios, mejorando las recomendaciones basadas en tendencias más actuales.
+  
+- **Mejora del modelo con datos acumulados**: A medida que se acumulen más datos, el sistema podrá identificar nuevas combinaciones de productos de manera automática, sugiriendo artículos que no se habrían detectado inicialmente. Esto permite que las recomendaciones sean más precisas a medida que el sistema obtiene más información sobre el comportamiento de compra.
+
+#### **Beneficios Combinados (Automático y Manual)**
+
+- **Ampliación de las recomendaciones**: Se sugieren productos clave que pueden no aparecer en los registros históricos, garantizando que el sistema no dependa exclusivamente de los datos de compra previos del cliente.
+  
+- **Mayor control sobre las recomendaciones**: La empresa puede influir activamente en el sistema, asegurándose de destacar productos estratégicos, lanzar nuevos artículos o mejorar las combinaciones de productos.
+  
+- **Mejora continua del sistema**: El sistema mejora con cada nueva cesta añadida, ya que el modelo se ajusta dinámicamente con el tiempo, garantizando que las recomendaciones sigan siendo útiles y relevantes.
 
 ---
 
