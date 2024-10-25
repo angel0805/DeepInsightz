@@ -52,7 +52,7 @@ En nuestra página principal mostramos un breve resumen de las herramientas que 
 
 2. **Recomendación de Artículos**: Sugiere productos complementarios basados en cestas de compra anteriores de los clientes.
 
-
+![Imagen de las recomendaciones de artículos](images/deepinsightz_recommendations.jpg)
 
 
 ---
