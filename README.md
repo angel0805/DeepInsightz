@@ -40,9 +40,11 @@ Para acceder a los datos de la aplicación, solo tienes que pulsar sobre [**este
 
 </div>
 
+**Página Resumen**
+En nuestra página principal mostramos un breve resumen de las herramientas que tiene nuestra aplicación, y una vista de pájaro de los datos que hemos analizados y que utiliza nuestro modelo para funcionar.
+
 ![Imagen del Proyecto en Funcionamiento](images/deepinsightz_web.jpg)
 
-Nuestra web incluye dos herramientas clave:
 
 1. **Análisis de Clientes**: Predicción de ventas por fabricante, ayudando a los equipos de ventas a tomar decisiones basadas en datos.
 
