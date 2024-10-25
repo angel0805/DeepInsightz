@@ -40,12 +40,17 @@ Para acceder a los datos de la aplicación, solo tienes que pulsar sobre [**este
 
 </div>
 
+![Imagen del Proyecto en Funcionamiento](images/deepinsightz_web.jpg)
+
 Nuestra web incluye dos herramientas clave:
 
 1. **Análisis de Clientes**: Predicción de ventas por fabricante, ayudando a los equipos de ventas a tomar decisiones basadas en datos.
+
+![Imagen del Análisis de Cliente](images/deepinsightz_customer_analysis.jpg)
+
 2. **Recomendación de Artículos**: Sugiere productos complementarios basados en cestas de compra anteriores de los clientes.
 
-![Imagen del Proyecto en Funcionamiento](images/deepinsightz_web.jpg)
+
 
 
 ---
