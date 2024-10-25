@@ -24,8 +24,10 @@ El proyecto ha sido organizado de manera modular para facilitar su mantenimiento
 
    - **Archivos clave en Google Drive**:
      - `ventas_clientes.csv`: Contiene los datos históricos de ventas por cliente.
+     - `clean_dataset_lat_long.csv`: csv del que partimos para el sistema de recomendación, contiene todo el histórico de transacciones. 
      - `productos.csv`: Listado completo de productos disponibles.
-     - `cestas.csv`: Almacena los datos históricos de cestas de compra utilizadas para el sistema de recomendación.
+     - `cestas_su.csv`: Almacena los datos históricos de cestas de compra utilizadas para el sistema de recomendación.
+     - `cestas_final.csv`: Almacena, de manera más óptima, los datos históricos de cestas de compra utilizadas para el sistema de recomendación. (versión sin cestas duplicadas)
    
 3. **Hugging Face Spaces**: La aplicación web que integra el análisis de clientes y las recomendaciones de productos está desplegada en **Hugging Face Spaces**. Esta plataforma facilita la visualización y uso de las herramientas desarrolladas, permitiendo a los usuarios interactuar con el modelo de predicción y el sistema de recomendación.
 
@@ -152,7 +154,7 @@ En este caso, el SMAPE devuelve un valor finito y más razonable, lo que lo hace
 
 ### 2. **💡 Recomendación de Artículos**
 
-- **Algoritmo**: Para generar recomendaciones de productos complementarios, implementamos un enfoque basado en la similitud de cestas de compra utilizando **TF-IDF** y **cosine similarity**. Este método analiza las cestas de compra históricas y calcula la relevancia de cada artículo en relación con las compras anteriores del cliente. Para ello, usamos un modelo basado en la frecuencia de términos (**Term Frequency - TF**), donde cada cesta se convierte en una representación de los productos comprados. Esto nos permite comparar la nueva cesta con otras cestas similares y recomendar productos adicionales que aún no han sido añadidos por el cliente.
+- **Algoritmo**: Para generar recomendaciones de productos complementarios, implementamos un enfoque basado en la similitud de cestas de compra utilizando **Count-Vectorizer** y **cosine similarity**. Este método analiza las cestas de compra históricas y calcula la relevancia de cada artículo en relación con las compras anteriores del cliente. Para ello, usamos un modelo basado en la frecuencia de términos (**Term Frequency - TF**), donde cada cesta se convierte en una representación de los productos comprados. Esto nos permite comparar la nueva cesta con otras cestas similares y recomendar productos adicionales que aún no han sido añadidos por el cliente.
 
 En nuestro proyecto, utilizamos esta técnica porque:
 
@@ -191,25 +193,25 @@ Este enfoque asegura que el modelo se mantenga **actualizado** y **preciso** sin
 
 ### **2. Mejora Continua del Sistema de 💡 Recomendación de Artículos**
 
-El sistema de recomendación de cestas de compra se basa en la similitud de cestas anteriores mediante el uso de **TF-IDF** y **cosine similarity**, lo que permite sugerir productos complementarios basados en las compras históricas de los clientes. A pesar de ser eficaz, este enfoque tiene una limitación: **no recomendará productos que los clientes nunca han comprado antes**, lo que puede dejar fuera artículos relevantes que podrían incrementar las ventas.
+El sistema de recomendación de cestas de compra se basa en la similitud de cestas anteriores mediante el uso de **Count-vectorizer** y **cosine similarity**, lo que permite sugerir productos complementarios basados en las compras históricas de los clientes. A pesar de ser eficaz, este enfoque tiene una limitación: **no recomendará productos que los clientes nunca han comprado antes**, lo que puede dejar fuera artículos relevantes que podrían incrementar las ventas.
 
 #### **Retroalimentación Manual**
 
 Para evitar este problema, añadimos la opción de generar cestas de forma manual, de esta manera, si la empresa detecta un producto que debería recomendarse y que los clientes no lo compran porque lo desconocen, podrán generar las cestas necesarias para que el programa entienda que ese producto se debe recomendar junto a otros.
 
-1. **Actualización automática del modelo**: A medida que se añadan nuevas cestas al sistema, estas serán automáticamente integradas en la matriz **TF-IDF** y podrán influir en las recomendaciones futuras.
+1. **Actualización automática del modelo**: A medida que se añadan nuevas cestas al sistema, estas serán automáticamente integradas en la matriz **TF** y podrán influir en las recomendaciones futuras.
 
 2. **Incorporación de cestas definidas manualmente**: Los expertos podrán crear **cestas predefinidas** que incluyan productos que el cliente podría desconocer, pero que son cruciales para completar una venta (por ejemplo, herramientas especializadas que no siempre se compran junto con los productos principales, pero que son necesarias para su instalación). Al permitir que estos productos se **recomienden manualmente**, evitamos que el modelo dependa únicamente de la historia de compra del cliente.
 
 #### **Implementación Técnica**
 
-Técnicamente, esta retroalimentación se gestionará mediante la función **retroalimentacion**, que ya permite añadir nuevas cestas al historial, reentrenar la matriz de términos y ajustar el sistema de recomendaciones en base a estos cambios. De esta forma, se actualiza la representación **TF-IDF** para reflejar tanto las nuevas cestas históricas como las manuales, asegurando que el modelo **no pierda efectividad** con el tiempo.
+Técnicamente, esta retroalimentación se gestionará mediante la función **retroalimentacion**, que ya permite añadir nuevas cestas al historial, reentrenar la matriz de términos y ajustar el sistema de recomendaciones en base a estos cambios. De esta forma, se actualiza la representación **TF** para reflejar tanto las nuevas cestas históricas como las manuales, asegurando que el modelo **no pierda efectividad** con el tiempo.
 
 #### **Retroalimentación Automática**
 
-Para mejorar el sistema de manera automática, cada vez que se añadan nuevas cestas de compra, el sistema actualizará automáticamente la matriz **TF-IDF** con los datos recientes. Esto permite que las nuevas tendencias de compra de los clientes se reflejen en las recomendaciones futuras sin intervención manual.
+Para mejorar el sistema de manera automática, cada vez que se añadan nuevas cestas de compra, el sistema actualizará automáticamente la matriz **TF** con los datos recientes. Esto permite que las nuevas tendencias de compra de los clientes se reflejen en las recomendaciones futuras sin intervención manual.
 
-- **Incorporación de datos recientes**: Con el tiempo, los patrones de compra pueden cambiar, ya sea por la introducción de nuevos productos o por cambios en las necesidades del cliente. A medida que estas nuevas cestas de compra se añadan al sistema, la **matriz TF-IDF** se ajustará para reflejar esos cambios, mejorando las recomendaciones basadas en tendencias más actuales.
+- **Incorporación de datos recientes**: Con el tiempo, los patrones de compra pueden cambiar, ya sea por la introducción de nuevos productos o por cambios en las necesidades del cliente. A medida que estas nuevas cestas de compra se añadan al sistema, la **matriz TF** se ajustará para reflejar esos cambios, mejorando las recomendaciones basadas en tendencias más actuales.
   
 - **Mejora del modelo con datos acumulados**: A medida que se acumulen más datos, el sistema podrá identificar nuevas combinaciones de productos de manera automática, sugiriendo artículos que no se habrían detectado inicialmente. Esto permite que las recomendaciones sean más precisas a medida que el sistema obtiene más información sobre el comportamiento de compra.
 
@@ -224,7 +226,6 @@ Para mejorar el sistema de manera automática, cada vez que se añadan nuevas ce
 ---
 
 ## **👥 Colaboradores**
-
 - [**Angel Colina**](https://github.com/angel0805)(Es Venezolano)
 - [**Maria Ortega Rivas**](https://github.com/mariaorrri)
 - [**Guillermo Martínez Millá**](https://github.com/GuillePrograma94)
