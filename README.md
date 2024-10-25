@@ -218,6 +218,6 @@ Para mejorar el sistema de manera automática, cada vez que se añadan nuevas ce
 
 ## **👥 Colaboradores**
 
-- [**Angel Colina**](https://github.com/angel0805)
+- [**Angel Colina**](https://github.com/angel0805)(Es Venezolano)
 - [**Maria Ortega Rivas**](https://github.com/mariaorrri)
 - [**Guillermo Martínez Millá**](https://github.com/GuillePrograma94)
