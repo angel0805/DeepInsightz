@@ -42,12 +42,19 @@ Para acceder a los datos de la aplicación, solo tienes que pulsar sobre [**este
 
 </div>
 
-Nuestra web incluye dos herramientas clave:
-
-1. **Análisis de Clientes**: Predicción de ventas por fabricante, ayudando a los equipos de ventas a tomar decisiones basadas en datos.
-2. **Recomendación de Artículos**: Sugiere productos complementarios basados en cestas de compra anteriores de los clientes.
+**Página Resumen**
+En nuestra página principal mostramos un breve resumen de las herramientas que tiene nuestra aplicación, y una vista de pájaro de los datos que hemos analizados y que utiliza nuestro modelo para funcionar.
 
 ![Imagen del Proyecto en Funcionamiento](images/deepinsightz_web.jpg)
+
+
+1. **Análisis de Clientes**: Predicción de ventas por fabricante, ayudando a los equipos de ventas a tomar decisiones basadas en datos.
+
+![Imagen del Análisis de Cliente](images/deepinsightz_customer_analysis_detailed.jpg)
+
+2. **Recomendación de Artículos**: Sugiere productos complementarios basados en cestas de compra anteriores de los clientes.
+
+![Imagen de las recomendaciones de artículos](images/deepinsightz_recommendations.jpg)
 
 
 ---
@@ -219,7 +226,6 @@ Para mejorar el sistema de manera automática, cada vez que se añadan nuevas ce
 ---
 
 ## **👥 Colaboradores**
-
-- [**Angel Colina Cortés**](https://github.com/angel0805)
+- [**Angel Colina**](https://github.com/angel0805)(Es Venezolano)
 - [**Maria Ortega Rivas**](https://github.com/mariaorrri)
 - [**Guillermo Martínez Millá**](https://github.com/GuillePrograma94)
